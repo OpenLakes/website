@@ -30,12 +30,18 @@
   <header class="hero" id="top">
     <div class="container hero__grid">
       <div class="hero__content">
-        <p class="eyebrow">Open-source lakehouse</p>
-        <h1>Run the stack on your own terms</h1>
+        <p class="eyebrow">Cost control for open lakehouses</p>
+        <h1>Take back control of data platform spend</h1>
         <p class="lead">
-          OpenLakes documents how to operate an Iceberg + Trino lakehouse on Kubernetes. The deployer script wires the required storage, engines,
-          notebooks, and observability pieces so teams can stand up an in-house environment without inventing the plumbing.
+          Flexera's 2024 State of the Cloud Report once again lists cost optimization as the top initiative for enterprises.<sup><a href="#ref1">[1]</a></sup>
+          OpenLakes shows exactly how to self-host the Iceberg + Trino stack so you can reduce warehouse bills without handing your data to another
+          control plane.
         </p>
+        <ul style="margin: 1.5rem 0 2rem; padding-left: 1.2rem; color: var(--muted); line-height: 1.6;">
+          <li>Budget with real infrastructure prices instead of opaque consumption credits.</li>
+          <li>Keep regulated data inside environments you already audit.</li>
+          <li>Ship reliable analytics faster than building dozens of integrations in-house.</li>
+        </ul>
         <div class="hero__actions">
           <a href="https://core.openlakes.io/" class="btn btn--primary">Start free trial</a>
           <a href="mailto:hello@openlakes.io" class="btn btn--ghost">Talk to us</a>
@@ -53,25 +59,52 @@
   <section class="section" id="features">
     <div class="container">
       <div class="section__header">
-        <h2>Why OpenLakes?</h2>
-        <p>Apache 2.0 licensed reference architecture with the practical defaults needed to operate a reliable lakehouse.</p>
+        <h2>What data teams are up against</h2>
+        <p>We focus on the business problems that keep modern platforms from scaling sustainably.</p>
       </div>
       <div class="pill-grid">
         <div class="pill">
-          <h3>Guided install process</h3>
-          <p>Use the deployer script to generate manifests, review them in Git, and roll out the stack with the level of automation that fits your change controls.</p>
+          <h3>Runaway consumption bills</h3>
+          <p>Enterprises continue to cite cloud cost optimization as their #1 priority according to Flexera's 2024 State of the Cloud Report.<sup><a href="#ref1">[1]</a></sup> Paying list price for every query, replica, and feature makes budgeting nearly impossible.</p>
         </div>
         <div class="pill">
-          <h3>Open formats by default</h3>
-          <p>Everything ships in Iceberg, Parquet, and open APIs so you can swap engines, clouds, or storage without rewriting workloads.</p>
+          <h3>Regulatory pressure</h3>
+          <p>Gartner projects that 75% of the world’s population will have its personal data covered by modern privacy regulations by the end of 2024.<sup><a href="#ref2">[2]</a></sup> Handing telemetry to a third-party SaaS vendor often complicates compliance instead of simplifying it.</p>
         </div>
         <div class="pill">
-          <h3>Right-sized footprints</h3>
-          <p>Profiles for lab clusters, PoCs, and multi-node production give you a clear bill of materials before you turn anything on.</p>
+          <h3>Disconnected cost accountability</h3>
+          <p>The FinOps Foundation’s 2023 State of FinOps report highlights “getting engineers to take action on cost insights” as the top challenge.<sup><a href="#ref3">[3]</a></sup> If teams cannot see infrastructure inputs, they cannot correct expensive patterns.</p>
         </div>
         <div class="pill">
-          <h3>Operational guardrails</h3>
-          <p>Baseline security, monitoring, and backup tasks are included so you start with sensible defaults instead of a blank Terraform folder.</p>
+          <h3>Siloed tooling choices</h3>
+          <p>Every new SaaS tool introduces integration debt. Building a reference implementation once—and sharing the manifests openly—keeps stakeholders aligned on the same stack.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="solutions">
+    <div class="container">
+      <div class="section__header">
+        <h2>How OpenLakes helps</h2>
+        <p>A purpose-built reference implementation that balances financial, compliance, and engineering priorities.</p>
+      </div>
+      <div class="pill-grid">
+        <div class="pill">
+          <h3>Transparent cost modeling</h3>
+          <p>Every layer lists the images, storage classes, and resource requests it relies on. Finance teams can map infrastructure invoices directly to workloads instead of guessing at opaque consumption credits.</p>
+        </div>
+        <div class="pill">
+          <h3>Control without rewrites</h3>
+          <p>The deployer wires Iceberg, Trino, Spark, Airflow, Superset, Meltano, and OpenMetadata together with sane defaults so you avoid a multi-month integration program.</p>
+        </div>
+        <div class="pill">
+          <h3>Audit-friendly operations</h3>
+          <p>Because OpenLakes runs on your Kubernetes clusters, access, logging, and residency follow the same guardrails you already enforce elsewhere.</p>
+        </div>
+        <div class="pill">
+          <h3>Documented playbooks</h3>
+          <p>Each Helm chart, docker image, and example notebook is versioned under Apache 2.0. You can reproduce, extend, or certificate-review every change before it reaches production.</p>
         </div>
       </div>
     </div>
@@ -104,6 +137,20 @@
       <div style="text-align: center; margin-top: 2rem;">
         <a href="blog/" class="btn btn--ghost">View All Articles</a>
       </div>
+    </div>
+  </section>
+
+  <section class="section" id="sources">
+    <div class="container">
+      <div class="section__header">
+        <h2>Sources</h2>
+        <p>We cite independent research so you can validate every claim.</p>
+      </div>
+      <ol class="references" style="color: var(--muted); line-height: 1.6;">
+        <li id="ref1">Flexera, <em>2024 State of the Cloud Report</em> — cost optimization remained the top initiative for enterprises.</li>
+        <li id="ref2">Gartner, <em>Predicts 2024: Privacy</em> — projected 75% of the world’s population will have its personal data covered by modern privacy regulations by end of 2024.</li>
+        <li id="ref3">FinOps Foundation, <em>State of FinOps 2023</em> — listed “getting engineers to take action on cost data” as the most commonly cited challenge.</li>
+      </ol>
     </div>
   </section>
 
