@@ -72,14 +72,19 @@
   </style>
 </head>
 <body>
-  <div class="container">
-    <nav class="nav">
-      <a href="../" class="nav__logo">OpenLakes</a>
-      <div class="nav__links">
-        <a href="../">Home</a>
-        <a href="./">Blog</a>
-        <a href="https://docs.openlakes.io/">Docs</a>
-        <a href="https://github.com/openlakes-io">GitHub</a>
+  <div class="container" style="padding-top: 1rem;">
+    <nav style="display: flex; justify-content: space-between; align-items: center;">
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <img src="/brand/logo-icon.svg" alt="OpenLakes icon" style="width: 32px; height: 32px;" />
+        <span style="font-weight: 700; font-size: 1.1rem; color: var(--text);">OpenLakes</span>
+      </div>
+      <div style="display: flex; gap: 1.25rem; align-items: center;">
+        <a href="/" style="color: var(--muted); text-decoration: none; font-weight: 500;">Home</a>
+        <a href="/platform/" style="color: var(--muted); text-decoration: none; font-weight: 500;">Platform</a>
+        <a href="/blog/" style="color: var(--text); text-decoration: none; font-weight: 600;">Blog</a>
+        <a href="https://docs.openlakes.io/" style="color: var(--muted); text-decoration: none; font-weight: 500;">Docs</a>
+        <a href="https://github.com/openlakes-io" style="color: var(--muted); text-decoration: none; font-weight: 500;">GitHub</a>
+        <a href="https://core.openlakes.io/" class="btn btn--primary" style="padding: 0.4rem 1rem;">Sign In</a>
       </div>
     </nav>
   </div>
@@ -95,27 +100,27 @@
   <section class="section">
     <div class="container">
       <div class="blog-grid">
-        <a href="cfo-cost-control-open-source-lakehouse.html" class="blog-card">
+        <a href="data-platform-cost-control.html" class="blog-card">
           <h3>Bring Data Infrastructure Costs Back in Line</h3>
           <p>Track the real cost of managed warehouses and plan a gradual shift to self-hosted infrastructure.</p>
         </a>
 
-        <a href="cto-no-vendor-lock-in-data-platform.html" class="blog-card">
+        <a href="future-proof-lakehouse-platform.html" class="blog-card">
           <h3>Build a Future-Proof Data Platform Without Vendor Lock-In</h3>
           <p>Why Apache Iceberg and open source components protect your long-term technology strategy.</p>
         </a>
 
-        <a href="ciso-data-sovereignty-security.html" class="blog-card">
+        <a href="data-sovereignty-self-hosted.html" class="blog-card">
           <h3>Data Sovereignty: Keep Your Data in Your Environment</h3>
           <p>How self-hosted data infrastructure addresses compliance, security, and privacy requirements.</p>
         </a>
 
-        <a href="platform-engineering-single-deployment.html" class="blog-card">
+        <a href="coordinated-lakehouse-deployment.html" class="blog-card">
           <h3>Coordinate 20+ Integrated Data Tools with One Playbook</h3>
           <p>Documented rollout steps for Spark, Trino, Kafka, Superset, Airflow, and the shared dependencies they require.</p>
         </a>
 
-        <a href="data-engineer-pipelines-not-infrastructure.html" class="blog-card">
+        <a href="focus-on-pipelines-not-infra.html" class="blog-card">
           <h3>Focus on Pipelines, Not Infrastructure</h3>
           <p>Keep notebooks, pipelines, and metadata in sync through the built-in Airflow and JupyterHub workflow.</p>
         </a>
