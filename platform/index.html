@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OpenLakes Platform | Unified Lakehouse Architecture</title>
+  <title>Platform | OpenLakes</title>
+  <meta name="description" content="OpenLakes platform architecture: 8 integrated layers covering storage, compute, streaming, orchestration, analytics, ingestion, catalog, and monitoring." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -21,10 +22,10 @@
       <div style="display: flex; gap: 1.25rem; align-items: center;">
         <a href="/" style="color: var(--muted); text-decoration: none; font-weight: 500;">Home</a>
         <a href="/platform/" style="color: var(--text); text-decoration: none; font-weight: 600;">Platform</a>
-        <a href="/blog/" style="color: var(--muted); text-decoration: none; font-weight: 500;">Blog</a>
+        <a href="/products/" style="color: var(--muted); text-decoration: none; font-weight: 500;">Products</a>
         <a href="https://docs.openlakes.io/" style="color: var(--muted); text-decoration: none; font-weight: 500;">Docs</a>
         <a href="https://github.com/openlakes-io" style="color: var(--muted); text-decoration: none; font-weight: 500;">GitHub</a>
-        <a href="https://core.openlakes.io/" class="btn btn--primary" style="padding: 0.4rem 1rem;">Sign In</a>
+        <a href="https://harbor.openlakes.io/" class="btn btn--primary" style="padding: 0.4rem 1rem;">Sign In</a>
       </div>
     </nav>
   </div>
@@ -33,50 +34,58 @@
     <div class="container hero__grid">
       <div class="hero__content">
         <p class="eyebrow">Architecture</p>
-        <h1>The OpenLakes platform in one glance</h1>
+        <h1>One platform, eight integrated layers</h1>
         <p class="lead">
-          Eight documented layers mirror the structure of the OpenLakes Core repository. Each Helm chart is versioned, reviewed, and wired
-          for ingress, storage, and metrics so you can inspect every manifest before applying it to your cluster.
+          OpenLakes organizes 20+ open-source tools into a coherent architecture. Each layer is documented, versioned,
+          and wired for ingress, storage, and observability so you can inspect every component before deploying.
         </p>
         <div class="hero__actions">
-          <a href="https://core.openlakes.io/" class="btn btn--primary">Start free trial</a>
-          <a href="https://docs.openlakes.io/" class="btn btn--ghost">Documentation</a>
+          <a href="https://harbor.openlakes.io/" class="btn btn--primary">Start free trial</a>
+          <a href="https://docs.openlakes.io/core/" class="btn btn--ghost">Architecture docs</a>
         </div>
       </div>
       <div class="hero__visual">
         <div class="hero__brand" style="padding: 1.5rem;">
           <div style="display: grid; grid-template-columns: repeat(2, minmax(140px, 1fr)); gap: 1rem;">
             <div style="background: white; border-radius: 1rem; padding: 1rem; border: 1px solid var(--border);">
-              <p style="font-size: 0.85rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em;">Layer 01 · Infrastructure</p>
-              <p style="margin-top: 0.5rem;">Traefik ingress, Longhorn, PostgreSQL, MinIO, Kafka, and Nessie routing form the base.</p>
+              <p style="font-size: 0.85rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em;">Layer 01</p>
+              <p style="font-weight: 600; margin-top: 0.25rem;">Infrastructure</p>
+              <p style="margin-top: 0.5rem; font-size: 0.9rem;">PostgreSQL, MinIO, Kafka, Nessie, Redis, Traefik</p>
             </div>
             <div style="background: white; border-radius: 1rem; padding: 1rem; border: 1px solid var(--border);">
-              <p style="font-size: 0.85rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em;">Layer 02 · Compute</p>
-              <p style="margin-top: 0.5rem;">Trino 478 and Spark 4.1.0-preview3 (Iceberg + Nessie enabled) share object storage and credentials.</p>
+              <p style="font-size: 0.85rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em;">Layer 02</p>
+              <p style="font-weight: 600; margin-top: 0.25rem;">Compute</p>
+              <p style="margin-top: 0.5rem; font-size: 0.9rem;">Trino 478, Spark 4.1 with Iceberg + Nessie</p>
             </div>
             <div style="background: white; border-radius: 1rem; padding: 1rem; border: 1px solid var(--border);">
-              <p style="font-size: 0.85rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em;">Layer 03 · Streaming</p>
-              <p style="margin-top: 0.5rem;">Reserved for future engines. Spark Structured Streaming ships today for event use cases.</p>
+              <p style="font-size: 0.85rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em;">Layer 03</p>
+              <p style="font-weight: 600; margin-top: 0.25rem;">Streaming</p>
+              <p style="margin-top: 0.5rem; font-size: 0.9rem;">Kafka Streams, Spark Structured Streaming</p>
             </div>
             <div style="background: white; border-radius: 1rem; padding: 1rem; border: 1px solid var(--border);">
-              <p style="font-size: 0.85rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em;">Layer 04 · Orchestration</p>
-              <p style="margin-top: 0.5rem;">Airflow runtime image with OpenLakes providers and Papermill support keeps jobs reproducible.</p>
+              <p style="font-size: 0.85rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em;">Layer 04</p>
+              <p style="font-weight: 600; margin-top: 0.25rem;">Orchestration</p>
+              <p style="margin-top: 0.5rem; font-size: 0.9rem;">Airflow 3.x with KubernetesExecutor</p>
             </div>
             <div style="background: white; border-radius: 1rem; padding: 1rem; border: 1px solid var(--border);">
-              <p style="font-size: 0.85rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em;">Layer 05 · Analytics</p>
-              <p style="margin-top: 0.5rem;">Superset 4.1 and JupyterHub 4.3 connect to the same catalogs, buckets, and SSO settings.</p>
+              <p style="font-size: 0.85rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em;">Layer 05</p>
+              <p style="font-weight: 600; margin-top: 0.25rem;">Analytics</p>
+              <p style="margin-top: 0.5rem; font-size: 0.9rem;">Superset 4.1, JupyterHub 4.3</p>
             </div>
             <div style="background: white; border-radius: 1rem; padding: 1rem; border: 1px solid var(--border);">
-              <p style="font-size: 0.85rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em;">Layer 06 · Ingestion</p>
-              <p style="margin-top: 0.5rem;">Meltano 4.0.6 projects and Debezium 3.0 Kafka Connect deliver repeatable ELT + CDC paths.</p>
+              <p style="font-size: 0.85rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em;">Layer 06</p>
+              <p style="font-weight: 600; margin-top: 0.25rem;">Ingestion</p>
+              <p style="margin-top: 0.5rem; font-size: 0.9rem;">Meltano 4.0, Debezium 3.0 CDC</p>
             </div>
             <div style="background: white; border-radius: 1rem; padding: 1rem; border: 1px solid var(--border);">
-              <p style="font-size: 0.85rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em;">Layer 07 · Catalog</p>
-              <p style="margin-top: 0.5rem;">OpenMetadata 1.10.7 ships with PostgreSQL + OpenSearch backing services already plumbed.</p>
+              <p style="font-size: 0.85rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em;">Layer 07</p>
+              <p style="font-weight: 600; margin-top: 0.25rem;">Catalog</p>
+              <p style="margin-top: 0.5rem; font-size: 0.9rem;">OpenMetadata 1.10 with OpenSearch</p>
             </div>
             <div style="background: white; border-radius: 1rem; padding: 1rem; border: 1px solid var(--border);">
-              <p style="font-size: 0.85rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em;">Layer 08 · Monitoring</p>
-              <p style="margin-top: 0.5rem;">kube-prometheus-stack bundles Prometheus, Alertmanager, Grafana, and Loki dashboards.</p>
+              <p style="font-size: 0.85rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.07em;">Layer 08</p>
+              <p style="font-weight: 600; margin-top: 0.25rem;">Monitoring</p>
+              <p style="margin-top: 0.5rem; font-size: 0.9rem;">Prometheus, Grafana, Loki, Alertmanager</p>
             </div>
           </div>
         </div>
@@ -87,41 +96,33 @@
   <section class="section">
     <div class="container">
       <div class="section__header">
-        <h2>Default component versions</h2>
-        <p>Every chart pins an upstream version so reviews are predictable and upgrades are deliberate.</p>
+        <h2>Run it your way</h2>
+        <p>The same platform architecture, two deployment options.</p>
       </div>
-      <div class="pill-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
-        <div class="pill">
-          <h3>Trino 478</h3>
-          <p>Pinned to 478 with Nessie + MinIO catalogs already declared and secured behind Traefik.</p>
+      <div class="tier-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+        <div class="tier" style="border: 2px solid var(--accent);">
+          <p class="eyebrow" style="margin-bottom: 0.5rem;">Managed</p>
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">OpenLakes Harbor</h3>
+          <p>We deploy, configure, and operate all 8 layers for you. Sign up and start using the platform immediately.</p>
+          <ul>
+            <li>All components pre-integrated</li>
+            <li>Single sign-on included</li>
+            <li>Automatic updates and patches</li>
+            <li>30-day free trial available</li>
+          </ul>
+          <a href="https://harbor.openlakes.io/" class="btn btn--primary" style="margin-top: 1rem; display: inline-block;">Start free trial</a>
         </div>
-        <div class="pill">
-          <h3>Spark 4.1.0-preview3</h3>
-          <p>Custom Spark image with Iceberg 1.8, Nessie 0.77, OpenLineage, and Alluxio client jars.</p>
-        </div>
-        <div class="pill">
-          <h3>Airflow 3.1.2 runtime</h3>
-          <p>Based on apache/airflow:3.1.2 with Spark, Trino, dbt, Papermill, and Amazon providers baked in.</p>
-        </div>
-        <div class="pill">
-          <h3>Superset 4.1.1</h3>
-          <p>Official image, OAuth-ready, pointed at the shared PostgreSQL metadata store.</p>
-        </div>
-        <div class="pill">
-          <h3>JupyterHub 4.3.1</h3>
-          <p>Hub + proxy pair come with a notebook image that matches the Spark cluster stack.</p>
-        </div>
-        <div class="pill">
-          <h3>Meltano 4.0.6</h3>
-          <p>Runtime container pre-loaded with the OpenLakes sample project and S3-compatible targets.</p>
-        </div>
-        <div class="pill">
-          <h3>Debezium 3.0.0.Final</h3>
-          <p>Kafka Connect deployment sized for PostgreSQL CDC by default, adjustable via resource profiles.</p>
-        </div>
-        <div class="pill">
-          <h3>OpenMetadata 1.10.7</h3>
-          <p>Catalog, glossary, and lineage UI with built-in Airflow client + OpenSearch indexing.</p>
+        <div class="tier">
+          <p class="eyebrow" style="margin-bottom: 0.5rem;">Self-hosted</p>
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">OpenLakes Core</h3>
+          <p>Deploy on your own Kubernetes cluster. Full control over every layer, configuration, and resource.</p>
+          <ul>
+            <li>100% open-source (Apache 2.0)</li>
+            <li>Works on any Kubernetes</li>
+            <li>Customize every component</li>
+            <li>Community-supported</li>
+          </ul>
+          <a href="https://docs.openlakes.io/getting-started/quickstart/" class="btn btn--ghost" style="margin-top: 1rem; display: inline-block;">Deploy guide</a>
         </div>
       </div>
     </div>
@@ -130,59 +131,95 @@
   <section class="section section--alt">
     <div class="container">
       <div class="section__header">
+        <h2>Component versions</h2>
+        <p>OpenLakes pins every upstream version for predictable deployments.</p>
+      </div>
+      <div class="pill-grid" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
+        <div class="pill">
+          <h3>Trino 478</h3>
+          <p>Interactive SQL with Nessie + MinIO catalogs configured out of the box.</p>
+        </div>
+        <div class="pill">
+          <h3>Spark 4.1</h3>
+          <p>Custom image with Iceberg 1.8, Nessie 0.77, OpenLineage, and S3A support.</p>
+        </div>
+        <div class="pill">
+          <h3>Airflow 3.x</h3>
+          <p>KubernetesExecutor with Spark, Trino, dbt, and Papermill providers.</p>
+        </div>
+        <div class="pill">
+          <h3>Superset 4.1</h3>
+          <p>Self-service dashboards with OAuth and Trino as the default engine.</p>
+        </div>
+        <div class="pill">
+          <h3>JupyterHub 4.3</h3>
+          <p>Multi-user notebooks with Spark kernels matching the cluster stack.</p>
+        </div>
+        <div class="pill">
+          <h3>Meltano 4.0</h3>
+          <p>ELT platform with 500+ Singer taps and S3-compatible targets.</p>
+        </div>
+        <div class="pill">
+          <h3>Debezium 3.0</h3>
+          <p>CDC from PostgreSQL, MySQL, and MongoDB to Kafka topics.</p>
+        </div>
+        <div class="pill">
+          <h3>OpenMetadata 1.10</h3>
+          <p>Data catalog with lineage, quality checks, and glossary features.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
         <h2>Resource profiles</h2>
-        <p>The deploy script inspects your cluster and picks a profile (<code>compact-vm</code>, <code>compact</code>, <code>small</code>, or <code>full</code>). Override it in <code>core-config.yaml</code> when you need a specific footprint.</p>
+        <p>OpenLakes Core auto-selects a profile based on your cluster size.</p>
       </div>
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem;">
         <div class="pill" style="background: white;">
           <h3>compact-vm</h3>
-          <ul style="list-style: none; padding-left: 0; margin-top: 0.75rem; color: var(--muted);">
-            <li>Auto-selected for single-node macOS/VM setups.</li>
-            <li>Guards against under-provisioned CPU and memory.</li>
-            <li>Keeps every layer online with the smallest requests possible.</li>
-          </ul>
+          <p style="font-size: 0.9rem;">For single-node VMs (Rancher Desktop, Lima). Minimum footprint while keeping all services running.</p>
         </div>
         <div class="pill" style="background: white;">
           <h3>compact</h3>
-          <ul style="list-style: none; padding-left: 0; margin-top: 0.75rem; color: var(--muted);">
-            <li>Manual override for single-node bare metal.</li>
-            <li>Reduces Spark, Trino, Meltano, Debezium, and Loki footprints.</li>
-            <li>Useful when you need the entire stack on a workstation.</li>
-          </ul>
+          <p style="font-size: 0.9rem;">Single-node bare metal. Reduced Spark, Trino, and Loki footprints for workstation deployments.</p>
         </div>
         <div class="pill" style="background: white;">
           <h3>small</h3>
-          <ul style="list-style: none; padding-left: 0; margin-top: 0.75rem; color: var(--muted);">
-            <li>Default for most lab clusters and small multi-node installs.</li>
-            <li>Balances resource requests so all services remain enabled.</li>
-            <li>Works up to roughly 24 cores / 128&nbsp;Gi across the cluster.</li>
-          </ul>
+          <p style="font-size: 0.9rem;">Default for lab clusters. Balanced resources up to ~24 cores / 128 GB across the cluster.</p>
         </div>
         <div class="pill" style="background: white;">
           <h3>full</h3>
-          <ul style="list-style: none; padding-left: 0; margin-top: 0.75rem; color: var(--muted);">
-            <li>Selected when the cluster advertises ample CPU and memory.</li>
-            <li>Keeps higher retention, multiple Spark executors, and beefier Trino workers.</li>
-            <li>Designed for production environments with dedicated hardware.</li>
-          </ul>
+          <p style="font-size: 0.9rem;">Production clusters with dedicated hardware. Higher retention, multiple executors, beefier workers.</p>
         </div>
       </div>
-      <div style="text-align: center; margin-top: 2rem;">
-        <a href="https://core.openlakes.io/" class="btn btn--primary">Deploy OpenLakes now</a>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="get-started">
+    <div class="container" style="text-align: center;">
+      <h2>Ready to explore?</h2>
+      <p style="max-width: 600px; margin: 1rem auto 2rem;">Try OpenLakes Harbor free for 30 days, or deploy Core on your own cluster.</p>
+      <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <a href="https://harbor.openlakes.io/" class="btn btn--primary">Start free trial</a>
+        <a href="https://docs.openlakes.io/" class="btn btn--ghost">Read the docs</a>
       </div>
     </div>
   </section>
 
   <footer class="footer">
     <div class="container footer__grid">
-      <p>© <span id="year"></span> OpenLakes.io. Built with open-source from day one.</p>
+      <p>&copy; <span id="year"></span> OpenLakes. Built with open-source from day one.</p>
       <div class="footer__links">
-        <a href="/blog/">Blog</a>
+        <a href="/">Home</a>
+        <a href="/products/">Products</a>
         <a href="https://docs.openlakes.io/">Docs</a>
         <a href="https://docs.openlakes.io/privacy-policy/">Privacy</a>
         <a href="https://docs.openlakes.io/terms-of-service/">Terms</a>
         <a href="https://github.com/openlakes-io">GitHub</a>
-        <a href="mailto:hello@openlakes.io">Contact</a>
+        <a href="mailto:sales@openlakes.io">Contact</a>
       </div>
     </div>
   </footer>

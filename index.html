@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OpenLakes.io | Open-Source Lakehouse Reference</title>
+  <title>OpenLakes | Open-Source Lakehouse Platform</title>
+  <meta name="description" content="OpenLakes is a complete open-source lakehouse platform. Try OpenLakes Harbor free for 30 days or deploy OpenLakes Core on your own infrastructure." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -19,33 +20,29 @@
         <span style="font-weight: 700; font-size: 1.1rem; color: var(--text);">OpenLakes</span>
       </div>
       <div style="display: flex; gap: 1.25rem; align-items: center;">
-        <a href="/" style="color: var(--muted); text-decoration: none; font-weight: 500;">Home</a>
+        <a href="/" style="color: var(--text); text-decoration: none; font-weight: 600;">Home</a>
         <a href="platform/" style="color: var(--muted); text-decoration: none; font-weight: 500;">Platform</a>
-        <a href="blog/" style="color: var(--muted); text-decoration: none; font-weight: 500;">Blog</a>
+        <a href="products/" style="color: var(--muted); text-decoration: none; font-weight: 500;">Products</a>
         <a href="https://docs.openlakes.io/" style="color: var(--muted); text-decoration: none; font-weight: 500;">Docs</a>
         <a href="https://github.com/openlakes-io" style="color: var(--muted); text-decoration: none; font-weight: 500;">GitHub</a>
-        <a href="https://core.openlakes.io/" class="btn btn--primary" style="padding: 0.4rem 1rem;">Sign In</a>
+        <a href="https://harbor.openlakes.io/" class="btn btn--primary" style="padding: 0.4rem 1rem;">Sign In</a>
       </div>
     </nav>
   </div>
+
   <header class="hero" id="top">
     <div class="container hero__grid">
       <div class="hero__content">
-        <p class="eyebrow">Cost control for open lakehouses</p>
-        <h1>Take back control of data platform spend</h1>
+        <p class="eyebrow">Open-source lakehouse platform</p>
+        <h1>Your data platform, your way</h1>
         <p class="lead">
-          Cost optimization remains the top enterprise priority across every cloud survey we review.
-          OpenLakes shows exactly how to self-host the Iceberg + Trino stack so you can reduce warehouse bills without handing your data to another
-          control plane.
+          OpenLakes brings together Apache Iceberg, Spark, Trino, Airflow, Superset, and 15+ integrated tools
+          into a production-ready lakehouse. Run it yourself with OpenLakes Core, or let us manage it for you
+          with OpenLakes Harbor.
         </p>
-        <ul style="margin: 1.5rem 0 2rem; padding-left: 1.2rem; color: var(--muted); line-height: 1.6;">
-          <li>Budget with real infrastructure prices instead of opaque consumption credits.</li>
-          <li>Keep regulated data inside environments you already audit.</li>
-          <li>Ship reliable analytics faster than building dozens of integrations in-house.</li>
-        </ul>
         <div class="hero__actions">
-          <a href="https://core.openlakes.io/" class="btn btn--primary">Start free trial</a>
-          <a href="https://docs.openlakes.io/" class="btn btn--ghost">Documentation</a>
+          <a href="https://harbor.openlakes.io/" class="btn btn--primary">Start 30-day free trial</a>
+          <a href="https://docs.openlakes.io/getting-started/quickstart/" class="btn btn--ghost">Deploy Core</a>
         </div>
       </div>
       <div class="hero__visual">
@@ -56,100 +53,144 @@
     </div>
   </header>
 
-  <section class="section" id="features">
+  <section class="section" id="choose-path">
     <div class="container">
       <div class="section__header">
-        <h2>What data teams are up against</h2>
-        <p>We focus on the business problems that keep modern platforms from scaling sustainably.</p>
+        <h2>Choose your path</h2>
+        <p>Two ways to run the same powerful open-source stack.</p>
       </div>
-      <div class="pill-grid">
-        <div class="pill">
-          <h3>Runaway consumption bills</h3>
-          <p>Enterprises continue to cite cloud cost optimization as their top priority. Paying list price for every query, replica, and feature makes budgeting nearly impossible.</p>
+      <div class="tier-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
+        <div class="tier" style="border: 2px solid var(--accent);">
+          <p class="eyebrow" style="margin-bottom: 0.5rem;">Managed</p>
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">OpenLakes Harbor</h3>
+          <p style="font-size: 0.95rem;">We host and manage the entire stack so you can focus on your data.</p>
+          <ul>
+            <li>30-day free trial, no credit card required</li>
+            <li>Single sign-on and user management included</li>
+            <li>All components pre-integrated and configured</li>
+            <li>Start building pipelines in minutes</li>
+          </ul>
+          <p style="font-size: 0.85rem; color: var(--accent); font-weight: 600; margin-top: 1rem;">
+            Harbor Pro with 99% uptime SLA coming Q1 2026
+          </p>
+          <a href="https://harbor.openlakes.io/" class="btn btn--primary" style="margin-top: 1rem; display: inline-block;">Start free trial</a>
         </div>
-        <div class="pill">
-          <h3>Regulatory pressure</h3>
-          <p>Modern privacy regulations now cover most jurisdictions. Handing telemetry to a third-party SaaS vendor often complicates compliance instead of simplifying it.</p>
-        </div>
-        <div class="pill">
-          <h3>Disconnected cost accountability</h3>
-          <p>FinOps and platform leaders consistently cite “getting engineers to take action on cost insights” as their biggest challenge. If teams cannot see infrastructure inputs, they cannot correct expensive patterns.</p>
-        </div>
-        <div class="pill">
-          <h3>Siloed tooling choices</h3>
-          <p>Every new SaaS tool introduces integration debt. Building a reference implementation once—and sharing the manifests openly—keeps stakeholders aligned on the same stack.</p>
+        <div class="tier">
+          <p class="eyebrow" style="margin-bottom: 0.5rem;">Self-hosted</p>
+          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">OpenLakes Core</h3>
+          <p style="font-size: 0.95rem;">Deploy the full platform on your own Kubernetes cluster.</p>
+          <ul>
+            <li>100% open-source, Apache 2.0 licensed</li>
+            <li>Run on any Kubernetes (cloud or on-prem)</li>
+            <li>Full control over infrastructure and data</li>
+            <li>Single-command deployment script</li>
+          </ul>
+          <p style="font-size: 0.85rem; color: var(--muted); margin-top: 1rem;">
+            Community-supported via GitHub
+          </p>
+          <a href="https://docs.openlakes.io/getting-started/quickstart/" class="btn btn--ghost" style="margin-top: 1rem; display: inline-block;">View deployment guide</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section section--alt" id="solutions">
+  <section class="section section--alt" id="stack">
     <div class="container">
       <div class="section__header">
-        <h2>How OpenLakes helps</h2>
-        <p>A purpose-built reference implementation that balances financial, compliance, and engineering priorities.</p>
+        <h2>A complete lakehouse in one stack</h2>
+        <p>Battle-tested open-source projects, wired together with sane defaults.</p>
       </div>
       <div class="pill-grid">
         <div class="pill">
-          <h3>Transparent cost modeling</h3>
-          <p>Every layer lists the images, storage classes, and resource requests it relies on. Finance teams can map infrastructure invoices directly to workloads instead of guessing at opaque consumption credits.</p>
+          <h3>Storage & Tables</h3>
+          <p>MinIO for S3-compatible object storage. Apache Iceberg for ACID transactions, time travel, and schema evolution. Project Nessie for Git-like version control of your data.</p>
         </div>
         <div class="pill">
-          <h3>Control without rewrites</h3>
-          <p>The deployer wires Iceberg, Trino, Spark, Airflow, Superset, Meltano, and OpenMetadata together with sane defaults so you avoid a multi-month integration program.</p>
+          <h3>Query & Compute</h3>
+          <p>Trino for fast interactive SQL. Apache Spark for batch processing and streaming. Both engines share the same Iceberg catalog and storage layer.</p>
         </div>
         <div class="pill">
-          <h3>Audit-friendly operations</h3>
-          <p>Because OpenLakes runs on your Kubernetes clusters, access, logging, and residency follow the same guardrails you already enforce elsewhere.</p>
+          <h3>Orchestration</h3>
+          <p>Apache Airflow coordinates your pipelines with the KubernetesExecutor. Schedule notebooks, dbt models, Spark jobs, and SQL transformations from one place.</p>
         </div>
         <div class="pill">
-          <h3>Documented playbooks</h3>
-          <p>Each Helm chart, docker image, and example notebook is versioned under Apache 2.0. You can reproduce, extend, or certificate-review every change before it reaches production.</p>
+          <h3>Ingestion</h3>
+          <p>Meltano with Singer taps for batch ELT from 500+ sources. Debezium for real-time CDC from PostgreSQL, MySQL, and MongoDB to Kafka and Iceberg.</p>
+        </div>
+        <div class="pill">
+          <h3>Analytics & BI</h3>
+          <p>Apache Superset for self-service dashboards connected to Trino. JupyterHub for collaborative notebooks with Spark kernels pre-configured.</p>
+        </div>
+        <div class="pill">
+          <h3>Catalog & Governance</h3>
+          <p>OpenMetadata for data discovery, lineage tracking, and data quality. Automatically catalog all your Iceberg tables and pipeline metadata.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="section section--alt" id="blog">
+  <section class="section" id="why">
     <div class="container">
       <div class="section__header">
-        <h2>From the Blog</h2>
-        <p>Practical notes on running open infrastructure and keeping deployments predictable.</p>
+        <h2>Why teams choose OpenLakes</h2>
+        <p>Solve real data platform challenges without the complexity.</p>
       </div>
       <div class="pill-grid">
-        <a href="blog/data-platform-cost-control.html" class="pill" style="text-decoration: none; color: inherit;">
-          <h3 style="font-size: 1.1rem;">Reduce Data Platform Spend</h3>
-          <p style="font-size: 0.9rem;">Track the real cost of warehouses and plan a gradual transition to open infrastructure.</p>
-        </a>
-        <a href="blog/future-proof-lakehouse-platform.html" class="pill" style="text-decoration: none; color: inherit;">
-          <h3 style="font-size: 1.1rem;">Stay Portable</h3>
-          <p style="font-size: 0.9rem;">Design decisions that keep your data stack portable across clouds and vendors.</p>
-        </a>
-        <a href="blog/coordinated-lakehouse-deployment.html" class="pill" style="text-decoration: none; color: inherit;">
-          <h3 style="font-size: 1.1rem;">Reliable Deployments</h3>
-          <p style="font-size: 0.9rem;">Coordinating Trino, Spark, Airflow, and MinIO in a single rollout plan.</p>
-        </a>
-        <a href="blog/focus-on-pipelines-not-infra.html" class="pill" style="text-decoration: none; color: inherit;">
-          <h3 style="font-size: 1.1rem;">Ship Workflows Faster</h3>
-          <p style="font-size: 0.9rem;">Take notebooks and SQL to production without rebuilding the control plane yourself.</p>
-        </a>
+        <div class="pill">
+          <h3>Faster time to value</h3>
+          <p>Stop spending months integrating tools. OpenLakes ships with 20+ services pre-wired for storage, credentials, ingress, and observability. Deploy in minutes, not quarters.</p>
+        </div>
+        <div class="pill">
+          <h3>No vendor lock-in</h3>
+          <p>Every component is open-source and uses open formats. Your Iceberg tables work with any engine. Switch clouds or bring workloads on-prem without rewriting anything.</p>
+        </div>
+        <div class="pill">
+          <h3>Predictable costs</h3>
+          <p>Know exactly what you're paying for. No opaque consumption credits or surprise bills. Budget with real infrastructure prices you can map to workloads.</p>
+        </div>
+        <div class="pill">
+          <h3>Keep data in your control</h3>
+          <p>Run OpenLakes Core in your own environment. Meet compliance requirements by keeping data where you need it. Audit and secure using your existing guardrails.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="get-started">
+    <div class="container">
+      <div class="section__header">
+        <h2>Get started today</h2>
+        <p>Pick the path that works for your team.</p>
+      </div>
+      <div class="tier-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); max-width: 800px; margin: 0 auto;">
+        <div class="pill" style="text-align: center; padding: 2rem;">
+          <h3 style="font-size: 1.25rem;">Try Harbor free</h3>
+          <p>Get a fully managed environment in minutes. No Kubernetes required.</p>
+          <a href="https://harbor.openlakes.io/" class="btn btn--primary" style="margin-top: 1rem;">Start 30-day trial</a>
+        </div>
+        <div class="pill" style="text-align: center; padding: 2rem;">
+          <h3 style="font-size: 1.25rem;">Deploy Core yourself</h3>
+          <p>Clone the repo and run the deployment script on your cluster.</p>
+          <a href="https://docs.openlakes.io/getting-started/quickstart/" class="btn btn--ghost" style="margin-top: 1rem;">Read the docs</a>
+        </div>
       </div>
       <div style="text-align: center; margin-top: 2rem;">
-        <a href="blog/" class="btn btn--ghost">View All Articles</a>
+        <p style="font-size: 0.95rem;">Questions? Reach out at <a href="mailto:sales@openlakes.io" style="color: var(--accent);">sales@openlakes.io</a></p>
       </div>
     </div>
   </section>
 
   <footer class="footer">
     <div class="container footer__grid">
-      <p>© <span id="year"></span> OpenLakes.io. Built with open-source from day one.</p>
+      <p>&copy; <span id="year"></span> OpenLakes. Built with open-source from day one.</p>
       <div class="footer__links">
-        <a href="blog/">Blog</a>
+        <a href="platform/">Platform</a>
+        <a href="products/">Products</a>
         <a href="https://docs.openlakes.io/">Docs</a>
         <a href="https://docs.openlakes.io/privacy-policy/">Privacy</a>
         <a href="https://docs.openlakes.io/terms-of-service/">Terms</a>
         <a href="https://github.com/openlakes-io">GitHub</a>
-        <a href="mailto:hello@openlakes.io">Contact</a>
+        <a href="mailto:sales@openlakes.io">Contact</a>
       </div>
     </div>
   </footer>

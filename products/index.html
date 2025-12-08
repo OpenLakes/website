@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | OpenLakes</title>
+  <meta name="description" content="OpenLakes products: Harbor managed service with 30-day free trial and Core open-source self-hosted deployment." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="icon" type="image/x-icon" href="../brand/favicon.ico" />
+  <script defer data-domain="openlakes.io" data-api="https://plausible.openlakes.io/api/event" src="https://plausible.openlakes.io/js/script.js"></script>
+  <style>
+    .product-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 1rem;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+    }
+    .product-card--featured {
+      border: 2px solid var(--accent);
+      position: relative;
+    }
+    .product-card--featured::before {
+      content: "Most Popular";
+      position: absolute;
+      top: -12px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--accent);
+      color: white;
+      padding: 0.25rem 1rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .product-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .product-card ul {
+      padding-left: 1.2rem;
+      margin: 1.5rem 0;
+      flex-grow: 1;
+    }
+    .product-card ul li {
+      margin-bottom: 0.5rem;
+      color: var(--muted);
+    }
+    .coming-soon-badge {
+      display: inline-block;
+      background: var(--bg-alt);
+      color: var(--accent);
+      padding: 0.25rem 0.75rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-top: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" style="padding-top: 1rem;">
+    <nav style="display: flex; justify-content: space-between; align-items: center;">
+      <div style="display: flex; align-items: center; gap: 0.5rem;">
+        <img src="/brand/logo-icon.svg" alt="OpenLakes icon" style="width: 32px; height: 32px;" />
+        <span style="font-weight: 700; font-size: 1.1rem; color: var(--text);">OpenLakes</span>
+      </div>
+      <div style="display: flex; gap: 1.25rem; align-items: center;">
+        <a href="/" style="color: var(--muted); text-decoration: none; font-weight: 500;">Home</a>
+        <a href="/platform/" style="color: var(--muted); text-decoration: none; font-weight: 500;">Platform</a>
+        <a href="/products/" style="color: var(--text); text-decoration: none; font-weight: 600;">Products</a>
+        <a href="https://docs.openlakes.io/" style="color: var(--muted); text-decoration: none; font-weight: 500;">Docs</a>
+        <a href="https://github.com/openlakes-io" style="color: var(--muted); text-decoration: none; font-weight: 500;">GitHub</a>
+        <a href="https://harbor.openlakes.io/" class="btn btn--primary" style="padding: 0.4rem 1rem;">Sign In</a>
+      </div>
+    </nav>
+  </div>
+
+  <header class="hero" style="padding-top: 4rem; padding-bottom: 3rem;">
+    <div class="container" style="text-align: center;">
+      <p class="eyebrow">Products</p>
+      <h1>Choose how you run OpenLakes</h1>
+      <p class="lead" style="max-width: 700px; margin: 0 auto;">
+        The same powerful lakehouse platform, available as a managed service or self-hosted on your infrastructure.
+      </p>
+    </div>
+  </header>
+
+  <section class="section" style="padding-top: 2rem;">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto;">
+
+        <!-- Harbor Trial -->
+        <div class="product-card product-card--featured">
+          <p class="eyebrow" style="margin-bottom: 0.25rem;">Managed</p>
+          <h3>OpenLakes Harbor</h3>
+          <p style="font-size: 0.95rem;">Fully managed lakehouse platform. We handle infrastructure, updates, and operations.</p>
+
+          <div style="margin: 1.5rem 0; padding: 1rem; background: var(--bg-alt); border-radius: 0.5rem;">
+            <p style="font-size: 1.5rem; font-weight: 700; color: var(--text); margin: 0;">Free Trial</p>
+            <p style="font-size: 0.85rem; margin: 0.25rem 0 0;">30 days, no credit card required</p>
+          </div>
+
+          <ul>
+            <li>All 20+ components pre-integrated</li>
+            <li>Single sign-on and user management</li>
+            <li>Start building in minutes</li>
+            <li>Automatic configuration and wiring</li>
+            <li>Access via web browser</li>
+          </ul>
+
+          <a href="https://harbor.openlakes.io/" class="btn btn--primary" style="text-align: center;">Start free trial</a>
+
+          <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
+            <p style="font-weight: 600; color: var(--text); margin-bottom: 0.5rem;">Harbor Pro</p>
+            <p style="font-size: 0.9rem; margin-bottom: 0.5rem;">Upgrade your trial to production-ready infrastructure:</p>
+            <ul style="margin: 0.5rem 0; padding-left: 1.2rem;">
+              <li style="font-size: 0.9rem;">99% uptime SLA</li>
+              <li style="font-size: 0.9rem;">Data loss protection</li>
+              <li style="font-size: 0.9rem;">24/7 availability</li>
+            </ul>
+            <span class="coming-soon-badge">Coming Q1 2026</span>
+          </div>
+        </div>
+
+        <!-- Core Self-Hosted -->
+        <div class="product-card">
+          <p class="eyebrow" style="margin-bottom: 0.25rem;">Self-Hosted</p>
+          <h3>OpenLakes Core</h3>
+          <p style="font-size: 0.95rem;">Deploy the complete platform on your own Kubernetes cluster. Full control over everything.</p>
+
+          <div style="margin: 1.5rem 0; padding: 1rem; background: var(--bg-alt); border-radius: 0.5rem;">
+            <p style="font-size: 1.5rem; font-weight: 700; color: var(--text); margin: 0;">Open Source</p>
+            <p style="font-size: 0.85rem; margin: 0.25rem 0 0;">Apache 2.0 licensed, free forever</p>
+          </div>
+
+          <ul>
+            <li>Run on any Kubernetes cluster</li>
+            <li>Cloud, on-prem, or hybrid</li>
+            <li>Customize every component</li>
+            <li>No vendor lock-in</li>
+            <li>Community support via GitHub</li>
+          </ul>
+
+          <a href="https://docs.openlakes.io/getting-started/quickstart/" class="btn btn--ghost" style="text-align: center;">View deployment guide</a>
+
+          <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
+            <p style="font-weight: 600; color: var(--text); margin-bottom: 0.5rem;">Requirements</p>
+            <ul style="margin: 0.5rem 0; padding-left: 1.2rem;">
+              <li style="font-size: 0.9rem;">Kubernetes 1.25+</li>
+              <li style="font-size: 0.9rem;">Minimum 10 vCPU / 18 GB RAM</li>
+              <li style="font-size: 0.9rem;">Helm 3, kubectl, bash 4+</li>
+            </ul>
+            <a href="https://docs.openlakes.io/getting-started/prerequisites/" style="color: var(--accent); font-size: 0.9rem;">Full requirements</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section__header">
+        <h2>Compare options</h2>
+      </div>
+      <div style="max-width: 800px; margin: 0 auto; overflow-x: auto;">
+        <table style="width: 100%; border-collapse: collapse; background: var(--card); border-radius: 0.75rem; overflow: hidden;">
+          <thead>
+            <tr style="background: var(--bg-alt);">
+              <th style="padding: 1rem; text-align: left; border-bottom: 1px solid var(--border);"></th>
+              <th style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--border);">Harbor Trial</th>
+              <th style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--border);">Harbor Pro</th>
+              <th style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--border);">Core</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="padding: 1rem; border-bottom: 1px solid var(--border);">All 20+ components</td>
+              <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--border);">&#10003;</td>
+              <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--border);">&#10003;</td>
+              <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--border);">&#10003;</td>
+            </tr>
+            <tr>
+              <td style="padding: 1rem; border-bottom: 1px solid var(--border);">Single sign-on</td>
+              <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--border);">&#10003;</td>
+              <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--border);">&#10003;</td>
+              <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--border);">Configure yourself</td>
+            </tr>
+            <tr>
+              <td style="padding: 1rem; border-bottom: 1px solid var(--border);">Managed infrastructure</td>
+              <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--border);">&#10003;</td>
+              <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--border);">&#10003;</td>
+              <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--border);">&mdash;</td>
+            </tr>
+            <tr>
+              <td style="padding: 1rem; border-bottom: 1px solid var(--border);">Uptime SLA</td>
+              <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--border);">&mdash;</td>
+              <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--border);">99%</td>
+              <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--border);">You manage</td>
+            </tr>
+            <tr>
+              <td style="padding: 1rem; border-bottom: 1px solid var(--border);">Data loss protection</td>
+              <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--border);">&mdash;</td>
+              <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--border);">&#10003;</td>
+              <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--border);">You manage</td>
+            </tr>
+            <tr>
+              <td style="padding: 1rem; border-bottom: 1px solid var(--border);">Full infrastructure control</td>
+              <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--border);">&mdash;</td>
+              <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--border);">&mdash;</td>
+              <td style="padding: 1rem; text-align: center; border-bottom: 1px solid var(--border);">&#10003;</td>
+            </tr>
+            <tr>
+              <td style="padding: 1rem;">Price</td>
+              <td style="padding: 1rem; text-align: center;">Free (30 days)</td>
+              <td style="padding: 1rem; text-align: center; color: var(--accent);">Coming soon</td>
+              <td style="padding: 1rem; text-align: center;">Free forever</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section__header">
+        <h2>Questions?</h2>
+        <p>We're here to help you choose the right option for your team.</p>
+      </div>
+      <div style="text-align: center;">
+        <a href="mailto:sales@openlakes.io" class="btn btn--primary">Contact sales@openlakes.io</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer__grid">
+      <p>&copy; <span id="year"></span> OpenLakes. Built with open-source from day one.</p>
+      <div class="footer__links">
+        <a href="/">Home</a>
+        <a href="/platform/">Platform</a>
+        <a href="https://docs.openlakes.io/">Docs</a>
+        <a href="https://docs.openlakes.io/privacy-policy/">Privacy</a>
+        <a href="https://docs.openlakes.io/terms-of-service/">Terms</a>
+        <a href="https://github.com/openlakes-io">GitHub</a>
+        <a href="mailto:sales@openlakes.io">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>
