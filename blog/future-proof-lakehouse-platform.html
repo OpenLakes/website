@@ -60,7 +60,7 @@
         <a href="/platform/" style="color: var(--muted); text-decoration: none; font-weight: 500;">Platform</a>
         <a href="/blog/" style="color: var(--text); text-decoration: none; font-weight: 600;">Blog</a>
         <a href="https://docs.openlakes.io/" style="color: var(--muted); text-decoration: none; font-weight: 500;">Docs</a>
-        <a href="https://github.com/openlakes-io" style="color: var(--muted); text-decoration: none; font-weight: 500;">GitHub</a>
+        <a href="https://github.com/OpenLakes" style="color: var(--muted); text-decoration: none; font-weight: 500;">GitHub</a>
         <a href="https://harbor.openlakes.io/" class="btn btn--primary" style="padding: 0.4rem 1rem;">Sign In</a>
       </div>
     </nav>
@@ -253,17 +253,17 @@ Layer 01: Infrastructure &rarr; MinIO, PostgreSQL, Kafka, Nessie
       <ol>
         <li id="ref1">Apache Iceberg integration via Nessie catalog: <a href="https://docs.openlakes.io/core/components/nessie/" target="_blank">docs.openlakes.io/core/components/nessie</a></li>
         <li id="ref2">Layered architecture: <a href="https://docs.openlakes.io/core/#layered-architecture" target="_blank">docs.openlakes.io/core</a></li>
-        <li id="ref3">Nessie configuration: <a href="https://github.com/openlakes-io/core/blob/main/layers/01-infrastructure/values.yaml#L418-L443" target="_blank">layers/01-infrastructure/values.yaml</a> (Nessie 0.77.1, JDBC backend)</li>
-        <li id="ref4">PostgreSQL metadata store: <a href="https://github.com/openlakes-io/core/blob/main/layers/01-infrastructure/values.yaml#L259-L284" target="_blank">layers/01-infrastructure/values.yaml</a> (line 264: PostgreSQL 15)</li>
+        <li id="ref3">Nessie configuration: <a href="https://github.com/OpenLakes/core/blob/main/layers/01-infrastructure/values.yaml#L418-L443" target="_blank">layers/01-infrastructure/values.yaml</a> (Nessie 0.77.1, JDBC backend)</li>
+        <li id="ref4">PostgreSQL metadata store: <a href="https://github.com/OpenLakes/core/blob/main/layers/01-infrastructure/values.yaml#L259-L284" target="_blank">layers/01-infrastructure/values.yaml</a> (line 264: PostgreSQL 15)</li>
         <li id="ref5">Compute layer overview: <a href="https://docs.openlakes.io/core/components/spark/" target="_blank">docs.openlakes.io/core/components/spark</a></li>
-        <li id="ref6">Custom Spark image: <a href="https://github.com/openlakes-io/core/blob/main/layers/02-compute/values.yaml#L77-L80" target="_blank">layers/02-compute/values.yaml</a> (ghcr.io/openlakes/core/spark:1.0.0)</li>
-        <li id="ref7">Trino version: <a href="https://github.com/openlakes-io/core/blob/main/layers/02-compute/values.yaml#L29-L33" target="_blank">layers/02-compute/values.yaml</a> (trinodb/trino:478)</li>
-        <li id="ref8">MinIO configuration: <a href="https://github.com/openlakes-io/core/blob/main/layers/01-infrastructure/values.yaml#L298-L333" target="_blank">layers/01-infrastructure/values.yaml</a></li>
-        <li id="ref9">Alluxio caching: <a href="https://github.com/openlakes-io/core/blob/main/layers/01-infrastructure/values.yaml#L455-L645" target="_blank">layers/01-infrastructure/values.yaml</a> (Alluxio 2.9.3)</li>
-        <li id="ref10">Storage tier configuration: <a href="https://github.com/openlakes-io/core/blob/main/core-config.yaml#L44-L93" target="_blank">core-config.yaml</a></li>
-        <li id="ref11">Kafka version: <a href="https://github.com/openlakes-io/core/blob/main/layers/01-infrastructure/values.yaml#L335-L359" target="_blank">layers/01-infrastructure/values.yaml</a> (apache/kafka:4.0.1)</li>
-        <li id="ref12">OpenMetadata version: <a href="https://github.com/openlakes-io/core/blob/main/layers/07-catalog/values.yaml#L34-L38" target="_blank">layers/07-catalog/values.yaml</a> (1.10.7)</li>
-        <li id="ref13">Superset version: <a href="https://github.com/openlakes-io/core/blob/main/layers/05-analytics/values.yaml#L29-L33" target="_blank">layers/05-analytics/values.yaml</a> (apache/superset:4.1.1)</li>
+        <li id="ref6">Custom Spark image: <a href="https://github.com/OpenLakes/core/blob/main/layers/02-compute/values.yaml#L77-L80" target="_blank">layers/02-compute/values.yaml</a> (ghcr.io/openlakes/core/spark:1.0.0)</li>
+        <li id="ref7">Trino version: <a href="https://github.com/OpenLakes/core/blob/main/layers/02-compute/values.yaml#L29-L33" target="_blank">layers/02-compute/values.yaml</a> (trinodb/trino:478)</li>
+        <li id="ref8">MinIO configuration: <a href="https://github.com/OpenLakes/core/blob/main/layers/01-infrastructure/values.yaml#L298-L333" target="_blank">layers/01-infrastructure/values.yaml</a></li>
+        <li id="ref9">Alluxio caching: <a href="https://github.com/OpenLakes/core/blob/main/layers/01-infrastructure/values.yaml#L455-L645" target="_blank">layers/01-infrastructure/values.yaml</a> (Alluxio 2.9.3)</li>
+        <li id="ref10">Storage tier configuration: <a href="https://github.com/OpenLakes/core/blob/main/core-config.yaml#L44-L93" target="_blank">core-config.yaml</a></li>
+        <li id="ref11">Kafka version: <a href="https://github.com/OpenLakes/core/blob/main/layers/01-infrastructure/values.yaml#L335-L359" target="_blank">layers/01-infrastructure/values.yaml</a> (apache/kafka:4.0.1)</li>
+        <li id="ref12">OpenMetadata version: <a href="https://github.com/OpenLakes/core/blob/main/layers/07-catalog/values.yaml#L34-L38" target="_blank">layers/07-catalog/values.yaml</a> (1.10.7)</li>
+        <li id="ref13">Superset version: <a href="https://github.com/OpenLakes/core/blob/main/layers/05-analytics/values.yaml#L29-L33" target="_blank">layers/05-analytics/values.yaml</a> (apache/superset:4.1.1)</li>
       </ol>
     </div>
   </article>
@@ -275,7 +275,7 @@ Layer 01: Infrastructure &rarr; MinIO, PostgreSQL, Kafka, Nessie
         <a href="https://docs.openlakes.io/">Docs</a>
         <a href="https://docs.openlakes.io/privacy-policy/">Privacy</a>
         <a href="https://docs.openlakes.io/terms-of-service/">Terms</a>
-        <a href="https://github.com/openlakes-io">GitHub</a>
+        <a href="https://github.com/OpenLakes">GitHub</a>
       </div>
     </div>
   </footer>
