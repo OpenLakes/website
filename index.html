@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OpenLakes | Open-Source Lakehouse Platform</title>
-  <meta name="description" content="OpenLakes is a complete open-source lakehouse platform. Try OpenLakes Harbor free for 30 days or deploy OpenLakes Core on your own infrastructure." />
+  <title>OpenLakes Harbor | Your Data Lakehouse, Managed</title>
+  <meta name="description" content="OpenLakes Harbor is a managed lakehouse control plane. Ingest, query, and manage your data from a single dashboard. Coming soon." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -16,224 +16,204 @@
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'G-YN59Z3Q9HZ');
   </script>
+  <style>
+    .harbor-hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(170deg, #f0fdfa 0%, var(--bg) 40%, var(--bg-alt) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+    .harbor-hero::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 200px;
+      background: linear-gradient(0deg, rgba(8,145,178,0.06) 0%, transparent 100%);
+      pointer-events: none;
+    }
+    .harbor-hero__content {
+      max-width: 640px;
+      padding: 2rem 1.5rem;
+      position: relative;
+      z-index: 1;
+    }
+    .harbor-logo {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.75rem;
+      margin-bottom: 2.5rem;
+    }
+    .harbor-logo img { width: 44px; height: 44px; }
+    .harbor-logo span { font-weight: 700; font-size: 1.4rem; color: var(--text); }
+    .harbor-hero h1 {
+      font-size: clamp(2.4rem, 5vw, 3.5rem);
+      line-height: 1.15;
+      margin-bottom: 1.5rem;
+      color: var(--text);
+    }
+    .harbor-hero h1 em {
+      font-style: normal;
+      color: var(--accent);
+    }
+    .harbor-hero .lead {
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 500px;
+      margin: 0 auto 2.5rem;
+      line-height: 1.7;
+    }
+    .harbor-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(8,145,178,0.08);
+      border: 1px solid rgba(8,145,178,0.2);
+      color: var(--accent-2);
+      font-weight: 600;
+      font-size: 0.85rem;
+      padding: 0.5rem 1.25rem;
+      border-radius: 999px;
+      margin-bottom: 2rem;
+    }
+    .harbor-badge svg {
+      width: 16px;
+      height: 16px;
+    }
+    .harbor-waves {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      pointer-events: none;
+    }
+    .harbor-features {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.25rem;
+      margin-bottom: 3rem;
+      text-align: left;
+    }
+    .harbor-feature {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1.25rem;
+    }
+    .harbor-feature h3 {
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+      color: var(--text);
+    }
+    .harbor-feature p {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.5;
+    }
+    .harbor-cta {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .harbor-footer {
+      padding: 1.5rem 0;
+      text-align: center;
+      border-top: 1px solid var(--border);
+      background: var(--card);
+    }
+    .harbor-footer__links {
+      display: flex;
+      gap: 1.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 0.75rem;
+    }
+    .harbor-footer a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+    .harbor-footer a:hover { color: var(--accent); }
+    .harbor-footer__copy {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    @media (max-width: 700px) {
+      .harbor-features {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
 </head>
 <body>
-  <div class="container" style="padding-top: 1rem;">
-    <nav style="display: flex; justify-content: space-between; align-items: center;">
-      <div style="display: flex; align-items: center; gap: 0.5rem;">
-        <img src="/brand/logo-icon.svg" alt="OpenLakes icon" style="width: 32px; height: 32px;" />
-        <span style="font-weight: 700; font-size: 1.1rem; color: var(--text);">OpenLakes</span>
+  <div class="harbor-hero">
+    <div class="harbor-hero__content">
+      <div class="harbor-logo">
+        <img src="/brand/logo-icon.svg" alt="OpenLakes" />
+        <span>OpenLakes Harbor</span>
       </div>
-      <div style="display: flex; gap: 1.25rem; align-items: center;">
-        <a href="/" style="color: var(--text); text-decoration: none; font-weight: 600;">Home</a>
-        <a href="platform/" style="color: var(--muted); text-decoration: none; font-weight: 500;">Platform</a>
-        <a href="integrations/" style="color: var(--muted); text-decoration: none; font-weight: 500;">Integrations</a>
-        <a href="products/" style="color: var(--muted); text-decoration: none; font-weight: 500;">Products</a>
-        <a href="https://docs.openlakes.io/" style="color: var(--muted); text-decoration: none; font-weight: 500;">Docs</a>
-        <a href="https://github.com/OpenLakes" style="color: var(--muted); text-decoration: none; font-weight: 500;">GitHub</a>
-        <a href="https://harbor.openlakes.io/" class="btn btn--primary" style="padding: 0.4rem 1rem;">Sign In</a>
+
+      <div class="harbor-badge">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+        Coming Soon
       </div>
-    </nav>
+
+      <h1>Your data lakehouse, <em>managed</em></h1>
+
+      <p class="lead">
+        Harbor is a managed lakehouse control plane. Ingest from 100+ sources, query with SQL,
+        and manage isolated workspaces &mdash; all from a single dashboard.
+      </p>
+
+      <div class="harbor-features">
+        <div class="harbor-feature">
+          <h3>Connectors</h3>
+          <p>100+ pre-built connectors for databases, SaaS apps, and APIs with real-time CDC.</p>
+        </div>
+        <div class="harbor-feature">
+          <h3>SQL Analytics</h3>
+          <p>Built-in SQL editor with schema browsing, saved queries, and CSV export.</p>
+        </div>
+        <div class="harbor-feature">
+          <h3>AI Pilot</h3>
+          <p>AI assistant that understands your data and generates SQL from natural language.</p>
+        </div>
+      </div>
+
+      <div class="harbor-cta">
+        <a href="mailto:hello@openlakes.io" class="btn btn--primary">Get in touch</a>
+        <a href="https://github.com/OpenLakes" class="btn btn--ghost">GitHub</a>
+      </div>
+    </div>
+
+    <svg class="harbor-waves" viewBox="0 0 1440 120" preserveAspectRatio="none" style="height: 80px; width: 100%;">
+      <path d="M0,60 C240,100 480,20 720,60 C960,100 1200,20 1440,60 L1440,120 L0,120 Z" fill="rgba(8,145,178,0.04)"/>
+      <path d="M0,80 C360,110 720,50 1080,80 C1260,95 1380,70 1440,80 L1440,120 L0,120 Z" fill="rgba(8,145,178,0.03)"/>
+    </svg>
   </div>
 
-  <header class="hero" id="top">
-    <div class="container hero__grid">
-      <div class="hero__content">
-        <p class="eyebrow">Open-source lakehouse platform</p>
-        <h1>Your data platform, your way</h1>
-        <p class="lead">
-          OpenLakes brings together Apache Iceberg, Spark, Trino, Airflow, Superset, and 15+ integrated tools
-          into a production-ready lakehouse. Run it yourself with OpenLakes Core, or let us manage it for you
-          with OpenLakes Harbor.
-        </p>
-        <div class="hero__actions">
-          <a href="https://harbor.openlakes.io/" class="btn btn--primary">Start 30-day free trial</a>
-          <a href="https://docs.openlakes.io/getting-started/quickstart/" class="btn btn--ghost">Deploy Core</a>
-        </div>
-      </div>
-      <div class="hero__visual">
-        <div class="hero__brand">
-          <img src="brand/logo.svg" alt="OpenLakes wordmark" style="width: 100%; max-width: 420px;" />
-        </div>
-      </div>
-    </div>
-  </header>
-
-  <section class="section" id="choose-path">
-    <div class="container">
-      <div class="section__header">
-        <h2>Choose your path</h2>
-        <p>Two ways to run the same powerful open-source stack.</p>
-      </div>
-      <div class="tier-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));">
-        <div class="tier" style="border: 2px solid var(--accent);">
-          <p class="eyebrow" style="margin-bottom: 0.5rem;">Managed</p>
-          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">OpenLakes Harbor</h3>
-          <p style="font-size: 0.95rem;">We host and manage the entire stack so you can focus on your data.</p>
-          <ul>
-            <li>30-day free trial, no credit card required</li>
-            <li>Single sign-on and user management included</li>
-            <li>All components pre-integrated and configured</li>
-            <li>Start building pipelines in minutes</li>
-          </ul>
-          <p style="font-size: 0.85rem; color: var(--accent); font-weight: 600; margin-top: 1rem;">
-            Harbor Pro with 99% uptime SLA coming Q1 2026
-          </p>
-          <a href="https://harbor.openlakes.io/" class="btn btn--primary" style="margin-top: 1rem; display: inline-block;">Start free trial</a>
-        </div>
-        <div class="tier">
-          <p class="eyebrow" style="margin-bottom: 0.5rem;">Self-hosted</p>
-          <h3 style="font-size: 1.5rem; margin-bottom: 0.5rem;">OpenLakes Core</h3>
-          <p style="font-size: 0.95rem;">Deploy the full platform on your own Kubernetes cluster.</p>
-          <ul>
-            <li>100% open-source, Apache 2.0 licensed</li>
-            <li>Run on any Kubernetes (cloud or on-prem)</li>
-            <li>Full control over infrastructure and data</li>
-            <li>Single-command deployment script</li>
-          </ul>
-          <p style="font-size: 0.85rem; color: var(--muted); margin-top: 1rem;">
-            Community-supported via GitHub
-          </p>
-          <a href="https://docs.openlakes.io/getting-started/quickstart/" class="btn btn--ghost" style="margin-top: 1rem; display: inline-block;">View deployment guide</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--alt" id="stack">
-    <div class="container">
-      <div class="section__header">
-        <h2>A complete lakehouse in one stack</h2>
-        <p>Battle-tested open-source projects, wired together with sane defaults.</p>
-      </div>
-      <div class="pill-grid">
-        <div class="pill">
-          <h3>Storage & Tables</h3>
-          <p>MinIO for S3-compatible object storage. Apache Iceberg for ACID transactions, time travel, and schema evolution. Project Nessie for Git-like version control of your data.</p>
-        </div>
-        <div class="pill">
-          <h3>Query & Compute</h3>
-          <p>Trino for fast interactive SQL. Apache Spark for batch processing and streaming. Both engines share the same Iceberg catalog and storage layer.</p>
-        </div>
-        <div class="pill">
-          <h3>Orchestration</h3>
-          <p>Apache Airflow coordinates your pipelines with the KubernetesExecutor. Schedule notebooks, dbt models, Spark jobs, and SQL transformations from one place.</p>
-        </div>
-        <div class="pill">
-          <h3>Ingestion</h3>
-          <p>Meltano with Singer taps for batch ELT from 500+ sources. Debezium for real-time CDC from PostgreSQL, MySQL, and MongoDB to Kafka and Iceberg.</p>
-        </div>
-        <div class="pill">
-          <h3>Analytics & BI</h3>
-          <p>Apache Superset for self-service dashboards connected to Trino. JupyterHub for collaborative notebooks with Spark kernels pre-configured.</p>
-        </div>
-        <div class="pill">
-          <h3>Catalog & Governance</h3>
-          <p>OpenMetadata for data discovery, lineage tracking, and data quality. Automatically catalog all your Iceberg tables and pipeline metadata.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" id="integrations">
-    <div class="container">
-      <div class="section__header">
-        <h2>Connect to your data, wherever it lives</h2>
-        <p>Bring data from 500+ sources into one unified lakehouse.</p>
-      </div>
-      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; margin-bottom: 2rem;">
-        <div class="pill">
-          <h3 style="display: flex; align-items: center; gap: 0.5rem;">Databases <span style="font-size: 0.7rem; padding: 0.2rem 0.6rem; border-radius: 999px; background: rgba(16, 185, 129, 0.1); color: #059669; font-weight: 600;">Real-time</span></h3>
-          <p style="margin-bottom: 0.75rem;">Sync changes from PostgreSQL, MySQL, and MongoDB in seconds with CDC. Batch imports from Snowflake, BigQuery, Oracle, and more.</p>
-          <p style="font-size: 0.85rem; color: var(--muted); margin-bottom: 0;">PostgreSQL, MySQL, MongoDB, SQL Server, Oracle, Snowflake, BigQuery, Redshift</p>
-        </div>
-        <div class="pill">
-          <h3 style="display: flex; align-items: center; gap: 0.5rem;">SaaS & Apps <span style="font-size: 0.7rem; padding: 0.2rem 0.6rem; border-radius: 999px; background: rgba(59, 130, 246, 0.1); color: #2563eb; font-weight: 600;">Batch</span></h3>
-          <p style="margin-bottom: 0.75rem;">Pull data from CRM, marketing, payments, and productivity tools on your schedule. Daily, hourly, or custom intervals.</p>
-          <p style="font-size: 0.85rem; color: var(--muted); margin-bottom: 0;">Salesforce, HubSpot, Stripe, Shopify, Google Analytics, Slack, Jira, GitHub</p>
-        </div>
-        <div class="pill">
-          <h3 style="display: flex; align-items: center; gap: 0.5rem;">Files & APIs <span style="font-size: 0.7rem; padding: 0.2rem 0.6rem; border-radius: 999px; background: rgba(59, 130, 246, 0.1); color: #2563eb; font-weight: 600;">Batch</span></h3>
-          <p style="margin-bottom: 0.75rem;">Load CSV, JSON, Excel, and Parquet from S3, GCS, or local storage. Connect to any REST or GraphQL API.</p>
-          <p style="font-size: 0.85rem; color: var(--muted); margin-bottom: 0;">CSV, JSON, Excel, Parquet, S3, GCS, Azure Blob, SFTP, REST APIs, GraphQL</p>
-        </div>
-      </div>
-      <div style="text-align: center;">
-        <a href="integrations/" class="btn btn--ghost">Browse all 500+ integrations</a>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--alt" id="why">
-    <div class="container">
-      <div class="section__header">
-        <h2>Why teams choose OpenLakes</h2>
-        <p>Solve real data platform challenges without the complexity.</p>
-      </div>
-      <div class="pill-grid">
-        <div class="pill">
-          <h3>Faster time to value</h3>
-          <p>Stop spending months integrating tools. OpenLakes ships with 20+ services pre-wired for storage, credentials, ingress, and observability. Deploy in minutes, not quarters.</p>
-        </div>
-        <div class="pill">
-          <h3>No vendor lock-in</h3>
-          <p>Every component is open-source and uses open formats. Your Iceberg tables work with any engine. Switch clouds or bring workloads on-prem without rewriting anything.</p>
-        </div>
-        <div class="pill">
-          <h3>Predictable costs</h3>
-          <p>Know exactly what you're paying for. No opaque consumption credits or surprise bills. Budget with real infrastructure prices you can map to workloads.</p>
-        </div>
-        <div class="pill">
-          <h3>Keep data in your control</h3>
-          <p>Run OpenLakes Core in your own environment. Meet compliance requirements by keeping data where you need it. Audit and secure using your existing guardrails.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section section--alt" id="get-started">
-    <div class="container">
-      <div class="section__header">
-        <h2>Get started today</h2>
-        <p>Pick the path that works for your team.</p>
-      </div>
-      <div class="tier-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); max-width: 800px; margin: 0 auto;">
-        <div class="pill" style="text-align: center; padding: 2rem;">
-          <h3 style="font-size: 1.25rem;">Try Harbor free</h3>
-          <p>Get a fully managed environment in minutes. No Kubernetes required.</p>
-          <a href="https://harbor.openlakes.io/" class="btn btn--primary" style="margin-top: 1rem;">Start 30-day trial</a>
-        </div>
-        <div class="pill" style="text-align: center; padding: 2rem;">
-          <h3 style="font-size: 1.25rem;">Deploy Core yourself</h3>
-          <p>Clone the repo and run the deployment script on your cluster.</p>
-          <a href="https://docs.openlakes.io/getting-started/quickstart/" class="btn btn--ghost" style="margin-top: 1rem;">Read the docs</a>
-        </div>
-      </div>
-      <div style="text-align: center; margin-top: 2rem;">
-        <p style="font-size: 0.95rem;">Questions? Reach out at <a href="mailto:sales@openlakes.io" style="color: var(--accent);">sales@openlakes.io</a></p>
-      </div>
-    </div>
-  </section>
-
-  <footer class="footer">
-    <div class="container footer__grid">
-      <p>&copy; <span id="year"></span> OpenLakes. Built with open-source from day one.</p>
-      <div class="footer__links">
-        <a href="platform/">Platform</a>
-        <a href="integrations/">Integrations</a>
-        <a href="products/">Products</a>
-        <a href="https://docs.openlakes.io/">Docs</a>
-        <a href="https://docs.openlakes.io/privacy-policy/">Privacy</a>
-        <a href="https://docs.openlakes.io/terms-of-service/">Terms</a>
-        <a href="https://github.com/OpenLakes">GitHub</a>
-        <a href="mailto:sales@openlakes.io">Contact</a>
-      </div>
-    </div>
+  <footer class="harbor-footer">
+    <nav class="harbor-footer__links">
+      <a href="/legal/terms/">Terms of Service</a>
+      <a href="/legal/privacy/">Privacy Policy</a>
+      <a href="/legal/data-deletion/">Data Deletion</a>
+      <a href="mailto:hello@openlakes.io">Contact</a>
+      <a href="https://github.com/OpenLakes">GitHub</a>
+    </nav>
+    <p class="harbor-footer__copy">&copy; <span id="year"></span> OpenLakes, Inc.</p>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>

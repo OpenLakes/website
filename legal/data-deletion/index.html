@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Data Deletion | OpenLakes Harbor</title>
+  <meta name="description" content="How to delete your data, workspaces, and account on OpenLakes Harbor." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="icon" type="image/x-icon" href="/brand/favicon.ico" />
+  <style>
+    .legal { max-width: 720px; margin: 0 auto; padding: 3rem 1.5rem 4rem; }
+    .legal h1 { font-size: 2rem; margin-bottom: 0.5rem; }
+    .legal .updated { font-size: 0.85rem; color: var(--muted); margin-bottom: 2.5rem; }
+    .legal h2 { font-size: 1.25rem; margin-top: 2.5rem; margin-bottom: 0.75rem; color: var(--text); }
+    .legal p, .legal li { color: var(--muted); line-height: 1.7; }
+    .legal ul, .legal ol { padding-left: 1.5rem; }
+    .legal li { margin-bottom: 0.5rem; }
+    .legal a { color: var(--accent); }
+    .legal-nav { padding: 1rem 1.5rem; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 0.75rem; }
+    .legal-nav img { width: 28px; height: 28px; }
+    .legal-nav a { color: var(--text); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+    .legal-footer { padding: 2rem 1.5rem; text-align: center; border-top: 1px solid var(--border); background: var(--card); }
+    .legal-footer a { color: var(--muted); text-decoration: none; margin: 0 0.75rem; font-size: 0.9rem; }
+    .legal-footer a:hover { color: var(--accent); }
+    .step-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 0.75rem;
+      padding: 1.5rem;
+      margin: 1.25rem 0;
+    }
+    .step-card h3 {
+      font-size: 1rem;
+      margin: 0 0 0.75rem;
+      color: var(--text);
+    }
+    .step-card p:last-child { margin-bottom: 0; }
+    .step-number {
+      display: inline-flex;
+      width: 28px;
+      height: 28px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: rgba(8,145,178,0.1);
+      color: var(--accent);
+      font-weight: 700;
+      font-size: 0.85rem;
+      margin-right: 0.5rem;
+      flex-shrink: 0;
+    }
+    .warning {
+      background: #fef3c7;
+      border: 1px solid #fde68a;
+      border-radius: 0.75rem;
+      padding: 1rem 1.25rem;
+      margin: 1.25rem 0;
+      color: #92400e;
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <nav class="legal-nav">
+    <img src="/brand/logo-icon.svg" alt="OpenLakes" />
+    <a href="/">OpenLakes Harbor</a>
+  </nav>
+
+  <article class="legal">
+    <h1>Data Deletion</h1>
+    <p class="updated">Last updated: April 4, 2026</p>
+
+    <p>OpenLakes Harbor provides self-service tools to delete your data at any time. You can delete individual workspaces, remove connectors, or delete your entire account. All deletion actions are available directly from the Harbor dashboard.</p>
+
+    <div class="warning">
+      <strong>All deletions are permanent.</strong> Once deleted, your data cannot be recovered. Please export any data you wish to keep before proceeding.
+    </div>
+
+    <h2>Delete a Workspace</h2>
+    <p>Deleting a workspace removes all associated data, including lakehouse tables, connector configurations, query history, and storage.</p>
+
+    <div class="step-card">
+      <h3><span class="step-number">1</span> Navigate to your workspace</h3>
+      <p>Log in to <a href="https://harbor.openlakes.io">harbor.openlakes.io</a> and select the workspace you want to delete.</p>
+    </div>
+    <div class="step-card">
+      <h3><span class="step-number">2</span> Open workspace settings</h3>
+      <p>Click <strong>Settings</strong> in the workspace sidebar.</p>
+    </div>
+    <div class="step-card">
+      <h3><span class="step-number">3</span> Delete the workspace</h3>
+      <p>Scroll to the <strong>Danger Zone</strong> section and click <strong>Delete Workspace</strong>. You will be asked to confirm by typing the workspace name.</p>
+    </div>
+
+    <p><strong>What gets deleted:</strong></p>
+    <ul>
+      <li>All lakehouse tables and data stored in object storage</li>
+      <li>All connector configurations and sync history</li>
+      <li>All query history and saved queries</li>
+      <li>Workspace-level credentials and secrets</li>
+      <li>Workspace member associations</li>
+    </ul>
+    <p>Deletion is processed within 30 days. During this period, the data is inaccessible and cannot be restored.</p>
+
+    <h2>Delete a Connector</h2>
+    <p>You can remove individual connectors without deleting the entire workspace.</p>
+
+    <div class="step-card">
+      <h3><span class="step-number">1</span> Navigate to your workspace</h3>
+      <p>Log in and select the workspace containing the connector.</p>
+    </div>
+    <div class="step-card">
+      <h3><span class="step-number">2</span> Open the connector</h3>
+      <p>Go to <strong>Connectors</strong> in the sidebar and select the connector you want to delete.</p>
+    </div>
+    <div class="step-card">
+      <h3><span class="step-number">3</span> Delete the connector</h3>
+      <p>Click the <strong>Delete</strong> button. This removes the connector configuration, stored credentials, and sync history. Data already ingested into lakehouse tables is not automatically removed.</p>
+    </div>
+
+    <h2>Delete Your Account</h2>
+    <p>Deleting your account permanently removes your profile, authentication credentials, and all associated data.</p>
+
+    <div class="warning">
+      <strong>Before deleting your account:</strong> If you are the sole owner of any organization or workspace, those resources will also be deleted. Transfer ownership first if you want them to continue.
+    </div>
+
+    <div class="step-card">
+      <h3><span class="step-number">1</span> Open account settings</h3>
+      <p>Log in to <a href="https://harbor.openlakes.io">harbor.openlakes.io</a> and navigate to <strong>Account Settings</strong> from the user menu in the top-right corner.</p>
+    </div>
+    <div class="step-card">
+      <h3><span class="step-number">2</span> Delete your account</h3>
+      <p>Scroll to the <strong>Danger Zone</strong> section and click <strong>Delete Account</strong>. You will be asked to confirm by typing your email address.</p>
+    </div>
+
+    <p><strong>What gets deleted:</strong></p>
+    <ul>
+      <li>Your user profile (name, email)</li>
+      <li>Authentication credentials (password hash, 2FA configuration, backup codes)</li>
+      <li>Session data and API tokens</li>
+      <li>Organization memberships</li>
+      <li>Organizations and workspaces where you are the sole owner</li>
+    </ul>
+    <p>Account deletion is processed within 30 days.</p>
+
+    <h2>Request Deletion by Email</h2>
+    <p>If you are unable to access the dashboard, you can request data deletion by emailing <a href="mailto:privacy@openlakes.io">privacy@openlakes.io</a> from the email address associated with your account. Include:</p>
+    <ul>
+      <li>Your registered email address</li>
+      <li>What you want deleted (specific workspace, connector, or entire account)</li>
+    </ul>
+    <p>We will verify your identity and process the request within 30 days.</p>
+
+    <h2>Data Deletion via API</h2>
+    <p>The following API endpoints support programmatic deletion:</p>
+    <ul>
+      <li><code>DELETE /v1/workspaces/{id}</code> &mdash; delete a workspace</li>
+      <li><code>DELETE /v1/connectors/{id}</code> &mdash; delete a connector</li>
+      <li><code>DELETE /v1/account</code> &mdash; delete your account</li>
+    </ul>
+    <p>All endpoints require authentication. See the <a href="https://docs.openlakes.io/">API documentation</a> for details.</p>
+
+    <h2>Questions</h2>
+    <p>For questions about data deletion or to exercise your privacy rights, contact us at <a href="mailto:privacy@openlakes.io">privacy@openlakes.io</a>.</p>
+  </article>
+
+  <footer class="legal-footer">
+    <a href="/">Home</a>
+    <a href="/legal/terms/">Terms</a>
+    <a href="/legal/privacy/">Privacy</a>
+    <a href="/legal/data-deletion/">Data Deletion</a>
+    <p style="margin-top: 1rem; font-size: 0.8rem; color: var(--muted);">&copy; <span id="year"></span> OpenLakes, Inc.</p>
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
